@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Drawing Canvas with Layers & Fill</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .canvas-container {
+            display: inline-block;
+            position: relative;
+            border: 1px solid #000;
+        }
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: crosshair;
+            background-color: transparent;
+        }
+        .controls {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customizable Drawing Canvas with Layers & Fill</h2>
+    <div class="controls">
+        <label>Brush Size: <input type="range" id="brushSize" min="1" max="50" value="5"></label>
+        <label>Brush Color: <input type="color" id="brushColor" value="#000000"></label>
+        <label>Canvas Background: <input type="color" id="bgColor" value="#ffffff"></label>
+        <button id="applyBgColor">Apply Background Color</button>
+        <button id="eraser">Eraser</button>
+        <button id="textTool">Text</button>
+        <button id="undo">Undo</button>
+        <button id="clear">Clear</button>
+        <button id="save">Save</button>
+        <button id="drawCircle">Draw Circle</button>
+        <button id="fillTool">Fill</button>
+    </div>
+
+    <div class="canvas-container" id="canvasContainer">
+        <!-- Layers will be added dynamically -->
+    </div>
+
+    <script src="project05.js"></script>
+</body>
+</html>
